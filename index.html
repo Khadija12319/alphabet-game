@@ -40,12 +40,22 @@
             <p class="text-2xl font2 text-[#FFF] leading-7 font-medium text-center">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
             <button type="button" class="text-[#010313] bg-white px-[32px] py-[22px] rounded-lg mt-[56px] text-2xl font-semibold leading-7 block mx-auto">Play Now</button>
         </section>
+
+
+
         <!--Play Ground start-->
-        <section class="play-ground">
+        <section class="play-ground hidden">
                 <!--screen-->
-                <div class="">
-                    <div class="artboard artboard-horizontal phone-6 bg-white bg-opacity-70 backdrop-blur-sm mx-auto border-[20px] border-[#010313CC] rounded-2xl"></div>
-                </div>
+                <div class="flex flex-col justify-center items-center gap-20 pt-20">
+                    <div class="artboard artboard-horizontal phone-6 bg-white bg-opacity-70 backdrop-blur-sm mx-auto border-[20px] border-[#010313CC] rounded-2xl">
+                        <div class="flex justify-center">
+                            <p class="bg-[#010313CC] text-white font-normal text-[18px] leading-5 font2 px-[28px] pb-[16px] rounded-b-xl">Don't watch keyboard  while playing...</p>
+                        </div>
+                        <div class="flex justify-center items-center h-full">
+                            <p class="text-black text-center text-9xl font2 font-bold leading-[153px]">Y</p>
+                        </div>
+                    </div>
+                
                 <!--keyboard-->
                 <div>
                     <div class="flex justify-center gap-1 my-1 w-full">
@@ -84,19 +94,20 @@
                 </div>
                 <!--life score-->
 
-                <div>
-                    <button class="btn rounded-full bg-purple-700 text-white">
+                <div class="flex justify-between w-3/5">
+                    <button class="btn rounded-full bg-purple-700 text-white px-4">
                         Life
                         <img src="images/heart .svg" alt="">
                         <span>1</span>
                       </button>
 
-                      <button class="btn rounded-full bg-purple-700 text-white">
+                      <button class="btn rounded-full bg-purple-700 text-white px-4">
                         Score
                         <img src="images/dollar.svg" alt="">
                         <span>1</span>
                       </button>
                 </div>
+            </div>
 
             
         </section>
@@ -104,8 +115,12 @@
 
 
         <!--Score section-->
-        <section class="score">
-            
+        <section class="score flex justify-center items-center min-h-screen font2">
+            <div class="text-center">
+                <h1 class="text-[64px] font-extrabold text-white">Score : <span class="font-medium">14</span></h1>
+                <button class="btn bg-white text-black text-2xl leading-7 border-none hover:bg-white px-[32px] min-h-[60px] my-[16px]">Play Again</button>
+                <p class="text-white text-xl font-medium leading-6">Practice will make you Pro</p>
+            </div>
         </section>
     </main>
 </body>
