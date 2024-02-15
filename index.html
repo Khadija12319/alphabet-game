@@ -22,19 +22,91 @@
         .font3{
             font-family: "Anton", sans-serif;
         }
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .kbd{
+            background-color: white;
+            color: black;
+        }
     </style>
 </head>
-<body>
-    <section class="home">
+<body class="">
+    <main class="bg-[#010313] min-h-screen bg-[url(/images/background.png)] bg-no-repeat bg-center">
+        <!--Home screen-->
+        <section class="home min-h-screen flex flex-col justify-center hidden">
+            <h1 class="font3 text-[#FFF] text-[170px] font-normal text-center">ALPHA CLASH PRO</h1>
+            <p class="text-2xl font2 text-[#FFF] leading-7 font-medium text-center">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+            <button type="button" class="text-[#010313] bg-white px-[32px] py-[22px] rounded-lg mt-[56px] text-2xl font-semibold leading-7 block mx-auto">Play Now</button>
+        </section>
+        <!--Play Ground start-->
+        <section class="play-ground">
+                <!--screen-->
+                <div class="">
+                    <div class="artboard artboard-horizontal phone-6 bg-white bg-opacity-70 backdrop-blur-sm mx-auto border-[20px] border-[#010313CC] rounded-2xl"></div>
+                </div>
+                <!--keyboard-->
+                <div>
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd class="kbd">q</kbd>
+                        <kbd class="kbd">w</kbd>
+                        <kbd class="kbd">e</kbd>
+                        <kbd class="kbd">r</kbd>
+                        <kbd class="kbd">t</kbd>
+                        <kbd class="kbd">y</kbd>
+                        <kbd class="kbd">u</kbd>
+                        <kbd class="kbd">i</kbd>
+                        <kbd class="kbd">o</kbd>
+                        <kbd class="kbd">p</kbd>
+                      </div> 
+                      <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd class="kbd">a</kbd>
+                        <kbd class="kbd">s</kbd>
+                        <kbd class="kbd">d</kbd>
+                        <kbd class="kbd">f</kbd>
+                        <kbd class="kbd">g</kbd>
+                        <kbd class="kbd">h</kbd>
+                        <kbd class="kbd">j</kbd>
+                        <kbd class="kbd">k</kbd>
+                        <kbd class="kbd">l</kbd>
+                      </div> 
+                      <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd class="kbd">z</kbd>
+                        <kbd class="kbd">x</kbd>
+                        <kbd class="kbd">c</kbd>
+                        <kbd class="kbd">v</kbd>
+                        <kbd class="kbd">b</kbd>
+                        <kbd class="kbd">n</kbd>
+                        <kbd class="kbd">m</kbd>
+                        <kbd class="kbd">/</kbd>
+                      </div>
+                </div>
+                <!--life score-->
 
-    </section>
+                <div>
+                    <button class="btn rounded-full bg-purple-700 text-white">
+                        Life
+                        <img src="images/heart .svg" alt="">
+                        <span>1</span>
+                      </button>
 
-    <section class="play-ground">
+                      <button class="btn rounded-full bg-purple-700 text-white">
+                        Score
+                        <img src="images/dollar.svg" alt="">
+                        <span>1</span>
+                      </button>
+                </div>
 
-    </section>
+            
+        </section>
+        <!--Play Ground end-->
 
-    <section class="score">
-        
-    </section>
+
+        <!--Score section-->
+        <section class="score">
+            
+        </section>
+    </main>
 </body>
 </html>
