@@ -12,6 +12,10 @@ function addHighlighter(elementId){
     document.getElementById(elementId).classList.add('bg-[#FFA500]');
 }
 
+function removeHighlighter(elementId){
+    document.getElementById(elementId).classList.remove('bg-[#FFA500]');
+}
+
 function getARandomAlphabet(){
     //created an alphabed array
     const alphabetString='abcdefghijklmnopqrstuvwxyz';
