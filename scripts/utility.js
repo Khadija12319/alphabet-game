@@ -16,6 +16,13 @@ function removeHighlighter(elementId){
     document.getElementById(elementId).classList.remove('bg-[#FFA500]');
 }
 
+function getTextElementValueById(elementId){
+    const element = document.getElementById(elementId);
+    const elementValueText = element.innerText;
+    const value = parseInt(elementValueText);
+    return value;
+}
+
 function getARandomAlphabet(){
     //created an alphabed array
     const alphabetString='abcdefghijklmnopqrstuvwxyz';

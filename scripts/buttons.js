@@ -6,21 +6,25 @@ function handleKeyboardButtonPressed(event){
 
     if(playerPressed===currentAlphabet){    
         //update score
-        const currentScoreElement = document.getElementById('current-score');
-        const currentScoreText= currentScoreElement.innerText;
-        const currentScore = parseInt(currentScoreText);
+        const currentScore = getTextElementValueById('current-score');
         const newScore = currentScore + 1;
-        currentScoreElement.innerText = newScore;
+        document.getElementById('current-score').innerText = newScore;
         //start a new round
         removeHighlighter(currentAlphabet);
         continueGame();
     }
     else{
-        const currentLifeElement= document.getElementById('init_life');
-        const currentLifeText =currentLifeElement.innerText;
-        const curretLife = parseInt(currentLifeText);
+        const curretLife = getTextElementValueById('init_life');
         const newLife = curretLife - 1;
-        currentLifeElement.innerText=newLife;
+        document.getElementById('init_life').innerText=newLife;
+
+        //life zero-------------------------
+        if(newLife===0){
+            hideElementById('play_ground');
+            const score1 = document.getElementById('current-score').innerText;
+            document.getElementById('final_score').innerText= score1;
+            showElementById('game_over');
+        }
 
     }
 }
@@ -42,6 +46,7 @@ function play(){
     //hide the home screen
     //show the play ground
     hideElementById('home_screen');
+    hideElementById('game_over');
     showElementById('play_ground');
     continueGame();
 }
