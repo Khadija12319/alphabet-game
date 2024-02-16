@@ -8,7 +8,7 @@ function handleKeyboardButtonPressed(event){
         //update score
         const currentScore = getTextElementValueById('current-score');
         const newScore = currentScore + 1;
-        document.getElementById('current-score').innerText = newScore;
+        setTextElementValueById('current-score',newScore);
         //start a new round
         removeHighlighter(currentAlphabet);
         continueGame();
@@ -16,7 +16,7 @@ function handleKeyboardButtonPressed(event){
     else{
         const curretLife = getTextElementValueById('init_life');
         const newLife = curretLife - 1;
-        document.getElementById('init_life').innerText=newLife;
+        setTextElementValueById('init_life', newLife);
 
         //life zero-------------------------
         if(newLife===0){
@@ -24,6 +24,11 @@ function handleKeyboardButtonPressed(event){
             const score1 = document.getElementById('current-score').innerText;
             document.getElementById('final_score').innerText= score1;
             showElementById('game_over');
+            //clear last alphabet background color
+
+            const currentLetter= getElementTextById('current-alphabet');
+            removeHighlighter(currentLetter);
+
         }
 
     }
@@ -48,5 +53,8 @@ function play(){
     hideElementById('home_screen');
     hideElementById('game_over');
     showElementById('play_ground');
+    setTextElementValueById('init_life', 5);
+    setTextElementValueById('current-score',0);
+
     continueGame();
 }
