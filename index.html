@@ -35,16 +35,16 @@
 <body class="">
     <main class="bg-[#010313] min-h-screen bg-[url(/images/background.png)] bg-no-repeat bg-center">
         <!--Home screen-->
-        <section class="home min-h-screen flex flex-col justify-center hidden">
+        <section class="home min-h-screen flex flex-col justify-center" id="home_screen">
             <h1 class="font3 text-[#FFF] text-[170px] font-normal text-center">ALPHA CLASH PRO</h1>
             <p class="text-2xl font2 text-[#FFF] leading-7 font-medium text-center">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-            <button type="button" class="text-[#010313] bg-white px-[32px] py-[22px] rounded-lg mt-[56px] text-2xl font-semibold leading-7 block mx-auto">Play Now</button>
+            <button onclick="play()" type="button" class="text-[#010313] bg-white px-[32px] py-[22px] rounded-lg mt-[56px] text-2xl font-semibold leading-7 block mx-auto" id="play_now">Play Now</button>
         </section>
 
 
 
         <!--Play Ground start-->
-        <section class="play-ground hidden">
+        <section class="play-ground hidden" id="play_ground">
                 <!--screen-->
                 <div class="flex flex-col justify-center items-center gap-20 pt-20">
                     <div class="artboard artboard-horizontal phone-6 bg-white bg-opacity-70 backdrop-blur-sm mx-auto border-[20px] border-[#010313CC] rounded-2xl">
@@ -115,7 +115,7 @@
 
 
         <!--Score section-->
-        <section class="score flex justify-center items-center min-h-screen font2">
+        <section class="score flex justify-center items-center min-h-screen font2 hidden">
             <div class="text-center bg-gradient-to-r to-[#FFFFFF18] from-[#ffffff65] p-12 rounded-2xl border-[1px] border-[#FFFFFF33]">
                 <h1 class="text-[64px] font-extrabold text-white">Score : <span class="font-medium">14</span></h1>
                 <button class="btn bg-white text-black text-2xl leading-7 border-none hover:bg-white px-[32px] min-h-[60px] my-[16px]">Play Again</button>
@@ -123,5 +123,7 @@
             </div>
         </section>
     </main>
+    <script src="scripts/utility.js"></script>
+    <script src="scripts/buttons.js"></script>
 </body>
 </html>
